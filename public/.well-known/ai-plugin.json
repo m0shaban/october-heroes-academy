@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "أكاديمية أبطال أكتوبر | October Heroes Academy",
+  "name_for_model": "october_heroes_academy",
+  "description_for_human": "أكاديمية رياضية متخصصة في الرياضات القتالية في مدينة 6 أكتوبر، مصر — كاراتيه، كيك بوكسينج، كونغ فو، جمباز، إيروبكس، MMA.",
+  "description_for_model": "October Heroes Academy (أكاديمية أبطال أكتوبر) is a martial arts academy in 6th October City, Giza, Egypt. It offers training programs in Karate, Kickboxing, Kung Fu, Gymnastics, Aerobics, and MMA for all ages (starting from 3 years). The academy is supervised by an Egypt & World Champion director. Contact: +201144050600. Address: 7th Neighborhood, 2nd District, 6th October City.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://octoberheroes.app/openapi.yaml"
+  },
+  "logo_url": "https://octoberheroes.app/logo.jpg",
+  "contact_email": "info@octoberheroes.app",
+  "legal_info_url": "https://octoberheroes.app/"
+}

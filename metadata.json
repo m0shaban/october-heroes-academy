@@ -1,0 +1,6 @@
+{
+  "name": "أكاديمية أبطال أكتوبر",
+  "description": "أكاديمية رياضية متخصصة في تقديم برامج تدريبية متكاملة في مختلف الرياضات القتالية",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

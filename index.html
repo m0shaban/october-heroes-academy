@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>أكاديمية أبطال أكتوبر | كاراتيه، كيك بوكسينج، كونغ فو - 6 أكتوبر</title>
+    <meta name="description" content="أكاديمية أبطال أكتوبر — أفضل أكاديمية للرياضات القتالية في مدينة 6 أكتوبر. كاراتيه، كيك بوكسينج، كونغ فو، جمباز، إيروبكس لجميع الأعمار من 3 سنوات. مدرب بطل مصر والعالم." />
+    <meta name="keywords" content="أكاديمية أبطال أكتوبر, كاراتيه 6 أكتوبر, كيك بوكسينج, كونغ فو, جمباز, رياضات قتالية, October Heroes Academy, martial arts egypt, karate kickboxing cairo" />
+    <meta name="theme-color" content="#003B8E" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/logo.jpg" />
+    <link rel="apple-touch-icon" href="/logo.jpg" />
+
+    <!-- Fonts: Cairo (Arabic) + Inter (English) with display swap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="/logo.jpg" />
+    <link rel="preload" as="image" href="/hero-banner.jpeg" />
+
+    <!-- DNS prefetch for maps -->
+    <link rel="dns-prefetch" href="https://www.google.com" />
+    <link rel="dns-prefetch" href="https://maps.googleapis.com" />
+
+    <!-- SPA: Handle redirect from 404.html -->
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      }(window.location));
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
