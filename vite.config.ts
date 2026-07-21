@@ -7,8 +7,8 @@ export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
     build: {
-      target: ['es2020', 'safari14', 'ios14'],
-      cssTarget: ['safari14', 'ios14'],
+      target: ['es2015', 'safari12', 'ios12'],
+      cssTarget: ['es2015', 'safari12', 'ios12'],
     },
     resolve: {
       alias: {

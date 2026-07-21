@@ -109,6 +109,8 @@ const resources = {
       "coach_mma": "كابتن MMA",
       "coach_kickboxing": "كابتن كيك بوكسينج",
       "coach_karate": "كابتن كاراتيه",
+      "coach_jody": "كابتن جودي شعبان",
+      "coach_jody_title": "بطلة إفريقيا في الكاراتيه",
       "coach_kungfu": "كابتن كونغ فو",
       "coach_gymnastics": "كابتن جمباز",
 
@@ -230,6 +232,8 @@ const resources = {
       "coach_mma": "MMA Coach",
       "coach_kickboxing": "Kickboxing Coach",
       "coach_karate": "Karate Coach",
+      "coach_jody": "Coach Jody Shaban",
+      "coach_jody_title": "Africa Karate Champion",
       "coach_kungfu": "Kung Fu Coach",
       "coach_gymnastics": "Gymnastics Coach",
 

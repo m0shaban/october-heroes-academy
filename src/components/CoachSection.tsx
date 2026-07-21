@@ -10,7 +10,7 @@ export default function CoachSection() {
     { name: t('coach_kickboxing'), sport: t('sport_kickboxing'), image: '/coach-kickboxing.jpeg' },
     { name: t('coach_karate'), sport: t('sport_karate'), image: '/coach-karate.jpeg' },
     { name: t('coach_karate'), sport: t('sport_karate'), image: '/coach-karate-2.jpeg' },
-    { name: t('coach_karate'), sport: t('sport_karate'), image: '/coach-karate-girl.jpeg' },
+    { name: t('coach_jody'), sport: t('coach_jody_title'), image: '/coach-karate-girl.jpeg' },
     { name: t('coach_kungfu'), sport: t('sport_kungfu'), image: '/coach-kungfu.jpeg' },
     { name: t('coach_gymnastics'), sport: t('sport_gymnastics'), image: '/coach-gymnastics.jpeg' },
   ];
