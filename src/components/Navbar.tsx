@@ -20,11 +20,20 @@ export default function Navbar() {
   const toggleLanguage = () => {
     const nextLang = i18n.language === 'ar' ? 'en' : 'ar';
     i18n.changeLanguage(nextLang);
-    localStorage.setItem('i18nextLng', nextLang);
+    try {
+      localStorage.setItem('i18nextLng', nextLang);
+    } catch (e) {
+      console.warn('localStorage.setItem failed:', e);
+    }
     if (typeof window !== 'undefined') {
-      const url = new URL(window.location.href);
-      url.searchParams.set('lang', nextLang);
-      window.history.pushState({}, '', url.toString());
+      try {
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', nextLang);
+        const relativeUrl = url.pathname + url.search + url.hash;
+        window.history.pushState({}, '', relativeUrl);
+      } catch (e) {
+        console.warn('history.pushState failed:', e);
+      }
     }
   };
 

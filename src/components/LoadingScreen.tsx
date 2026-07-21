@@ -6,8 +6,14 @@ export default function LoadingScreen() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Check if already shown this session or if running in automated test environment
-    const isTest = typeof window !== 'undefined' && (window.navigator.webdriver || window.location.search.includes('test') || sessionStorage.getItem('splash_shown'));
+    let splashShown = false;
+    try {
+      splashShown = !!sessionStorage.getItem('splash_shown');
+    } catch (e) {
+      console.warn('sessionStorage read error:', e);
+    }
+
+    const isTest = typeof window !== 'undefined' && (window.navigator.webdriver || window.location.search.includes('test') || splashShown);
     if (isTest) {
       setVisible(false);
       return;
@@ -26,7 +32,11 @@ export default function LoadingScreen() {
       } else {
         setTimeout(() => {
           setVisible(false);
-          sessionStorage.setItem('splash_shown', '1');
+          try {
+            sessionStorage.setItem('splash_shown', '1');
+          } catch (e) {
+            console.warn('sessionStorage write error:', e);
+          }
         }, 300);
       }
     };

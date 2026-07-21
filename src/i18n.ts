@@ -248,11 +248,15 @@ const resources = {
 
 const getInitialLanguage = (): string => {
   if (typeof window !== 'undefined') {
-    const params = new URLSearchParams(window.location.search);
-    const langParam = params.get('lang');
-    if (langParam === 'ar' || langParam === 'en') return langParam;
-    const localLang = localStorage.getItem('i18nextLng');
-    if (localLang === 'ar' || localLang === 'en') return localLang;
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const langParam = params.get('lang');
+      if (langParam === 'ar' || langParam === 'en') return langParam;
+      const localLang = localStorage.getItem('i18nextLng');
+      if (localLang === 'ar' || localLang === 'en') return localLang;
+    } catch (e) {
+      console.warn('localStorage read disabled or error:', e);
+    }
   }
   return 'ar';
 };

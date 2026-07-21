@@ -56,10 +56,15 @@ export default function App() {
 
     // Automatically append default language query parameter if missing to support history popstate sync
     if (typeof window !== 'undefined') {
-      const url = new URL(window.location.href);
-      if (!url.searchParams.has('lang')) {
-        url.searchParams.set('lang', i18n.language);
-        window.history.replaceState({}, '', url.toString());
+      try {
+        const url = new URL(window.location.href);
+        if (!url.searchParams.has('lang')) {
+          url.searchParams.set('lang', i18n.language);
+          const relativeUrl = url.pathname + url.search + url.hash;
+          window.history.replaceState({}, '', relativeUrl);
+        }
+      } catch (e) {
+        console.warn('history.replaceState failed:', e);
       }
     }
   }, [i18n.language]);
